@@ -1,0 +1,80 @@
+1  vim /etc/default/grub
+    2  dnf update
+    3  dnf install vim
+    4  vim /etc/default/grub
+    5  grub2-mkconfig
+    6  vim /etc/default.console-setup
+    7  vim /etc/default/console-setup
+    8  vim /etc/default
+    9  dnf install console-setup
+   10  vim /etc/default/console-setup
+   11  reboot
+   12  ping serverbash.com
+   13  ping prowse.tech
+   14  dnf install git tmux htop
+   15  poweroff
+   16  dnf update
+   17  poweroff
+   18  dnf update
+   19  ping serverbash.com
+   20  nmcli
+   21  ping 172.21.0.1.
+   22  ping 172.21.0.1
+   23  nmcli
+   24  poweroff
+   25  ip a
+   26  ping serverbash.com
+   27  poweroff
+   28  nmcli
+   29  nmcli c m enp1s0 
+   30  nmcli c m enp1s0 ipv4.method manual ipv4.address 10.0.2.202/24 ipv4.gateway 10.0.2.1 ipv4.dns 10.0.2.1
+   31  nmcli c d enp1s0 
+   32  nmcli c u enp1s0 
+   33  nmcli
+   34  ping 10.0.2.1
+   35  ping prowse.tech
+   36  dnf update
+   37  cd /etc
+   38  ls
+   39  cat system-release
+   40  cat os-release
+   41  less ls
+   42  ls | less
+   43  cat fedora-release 
+   44  poweroff
+   45  nmcli
+   46  ping 10.0.2.1
+   47  ping example.com
+   48  dnf update
+   49  poweroff
+   50  vim /etc/hostname
+   51  poweroff
+   52  nmcli
+   53  nmcli con mod enp1s0 ipv4.address 10.0.2.6/24 ipv4.gateway 10.0.2.1 ipv4.dns 10.0.2.4 ipv4.method manual
+   54  nmcli con down enp1s0
+   55  nmcli con up enp1s0
+   56  nmcli
+   57  nmcli con mod enp1s0 ipv4.dns-search "example.com"
+   58  nmcli con down enp1s0
+   59  nmcli con up enp1s0
+   60  nmcli
+   61  vim /etc/hostname
+   62  vim /etc/hosts
+   63  reboot
+   64  nmcli
+   65  ping debserver
+   66  dnf install freeipa-server
+   67  ipa-server-install
+   68  cat /tmp/ipa.system.records.6mp_xvfs.db
+   69  firewall-cmd --add-port={80,443,389,636,88,464}/tcp --perm
+   70  firewall-cmd reload
+   71* 
+   72  firewall-cmd --add-port={88,464,123}/udp --perm
+   73  firewall-cmd reload
+   74  firewall-cmd --reload
+   75  firewall-cmd --list-ports
+   76  kinit admin
+   77  ss -tulnw
+   78  nmap
+   79  ipa user-add --password --homedir /home/dave --shell=/bin/bash
+   80  history
