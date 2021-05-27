@@ -1,0 +1,169 @@
+ 1  apt install vim curl git
+    2  apt update
+    3  apt install vim curl git
+    4  vim /etc/network/interfaces
+    5  vim /etc/default/grub
+    6  update-grub
+    7  reboot
+    8  vim /etc/default/grub
+    9  ip a
+   10  dpkg-reconfigure console-setup
+   11  ip a
+   12  dpkg-reconfigure console-setup
+   13  ip a
+   14  reboot now
+   15  vim /etc/default/grub
+   16  reboot
+   17  ip a
+   18  ping serverbash.com
+   19  reboot 
+   20  shutdown now
+   21  vim /etc/default/grub
+   22  reboot now
+   23  update-grub
+   24  reboot
+   25  ip a
+   26  ping 172.21.0.1
+   27  vim /etc/network/interfaces
+   28  ip a
+   29  top
+   30  reboot now
+   31  shutdown now
+   32  ping serverbash.com
+   33  shutdown now
+   34  vim /etc/network/interfaces
+   35  shutdown now
+   36  apt update
+   37  apt upgrade
+   38  cat /etc/debian_version
+   39  ping serverbash.com
+   40  vim /etc/hostname
+   41  shutdown now
+   42  apt update
+   43  apt upgrade
+   44  cat /etc/debian_version
+   45  shutdown now
+   46  shutdown now
+   47  sudo
+   48  vim /etc/sudoers
+   49  shutdown 
+   50  poweroff
+   51  apt update
+   52  vim /etc/hostname
+   53  apt upgrade
+   54  poweroff
+   55  cat /etc/debian_version 
+   56  apt list --upgradeable
+   57  apt list --upgradeable | grep -e "-security"
+   58  apt-get -s dist-upgrade | grep "^Inst" | grep -i securi
+   59  unattended-upgrade --dry-run -d
+   60  q
+   61  apt update && apt upgrade -y
+   62  uname -a
+   63  systemctl status
+   64  poweroff
+   65  ip a
+   66  apt update && apt upgrade -y
+   67  cat /etc/debian_version 
+   68  poweroff
+   69  ip a
+   70  vim /etc/network/interfaces
+   71  vim /etc/resolv.conf 
+   72  poweroff
+   73  vim /etc/hostname
+   74  reboot
+   75  hostname
+   76  hostnamectl
+   77  apt update && apt upgrade -y
+   78  cat /etc/debian_version 
+   79  ip a
+   80  ip r
+   81  ping example.com
+   82  poweroff
+   83  apt install vim curl git -y
+   84  vim /etc/network/interfaces
+   85  ip a
+   86  vim /etc/network/interfaces
+   87  vim /etc/hostname
+   88  ip a && ip r
+   89  ping example.com
+   90  ping prowse.tech
+   91  poweroff
+   92  curl -1sLf 'https://dl.cloudsmith.io/public/isc/kea-1-8/cfg/setup/bash.deb.sh' | bash
+   93  apt install isc-kea-common
+   94  apt install isc-kea-dhcp4-server
+   95  systemctl status isc-kea-dhcp4-server.service 
+   96  cd /etc/kea
+   97  ls
+   98  vim kea-dhcp4.conf 
+   99  mv kea-dhcp4.conf backup.kea-dhcp4.conf
+  100  cd
+  101  git clone https://github.com/daveprowse/bls-ddd
+  102  cd bls-ddd/
+  103  ls
+  104  cp kea-dhcp4.conf /etc/kea
+  105  cd /etc/kea
+  106  ls
+  107  vim kea-dhcp4.conf 
+  108  ip a
+  109  ss -tulnw
+  110  vim kea-dhcp4.conf 
+  111  kea-dhcp4 -t kea-dhcp4.conf 
+  112  systemctl restart isc-kea-dhcp4-server.service 
+  113  systemctl status isc-kea-dhcp4-server.service 
+  114  cat /etc/debian_version 
+  115  systemctl status isc-kea-dhcp4-server.service 
+  116  ss -tulnw
+  117  vim kea-dhcp4.conf 
+  118  vim kea-dhcp4.conf 
+  119  cat /var/lib/kea/dhcp4.csv 
+  120  vim kea-dhcp4.conf 
+  121  ping example.com
+  122  cd
+  123  apt install -y bind9 bind9-doc dnsutils
+  124  systemctl status bind9
+  125  vim /etc/resolv.conf
+  126  vim /etc/kea/kea-dhcp4.conf 
+  127  dig @127.0.0.1 . NS
+  128  vim /etc/default/bind9
+  129  cd /etc/bind
+  130  ls
+  131  mv named.conf.options backup.named.conf.options
+  132  cp ~/bls-ddd/named.conf.options .
+  133  ls
+  134  vim named.conf.options
+  135  mv named.conf.local backup.named.conf.local
+  136  cp ~/bls-ddd/named.conf.local .
+  137  vim named.conf.local
+  138  vim named.conf.local
+  139  mkdir zones
+  140  cd zones
+  141  cp ~/bls-ddd/db.local db.example.com
+  142  cp ~/bls-ddd/db.127 db.2.0.10
+  143  ls
+  144  vim db.example.com 
+  145  vim db.2
+  146  vim db.2.0.10 
+  147  named-checkconf
+  148  named-checkzone example.com db.example.com 
+  149  named-checkconf -z
+  150  vim db.2.0.10 
+  151  named-checkconf -z
+  152  vim db.2.0.10 
+  153  named-checkconf -z
+  154  systemctl restart bind9
+  155  systemctl status bind9
+  156  dig example.com axfr
+  157  cd ..
+  158  ls
+  159  vim named.conf.options
+  160  cd zones
+  161  systemctl status bind9
+  162  journalctl -u bind9
+  163  ss -tulnw
+  164  systemctl restart isc-kea-dhcp4-server.service 
+  165  systemctl restart bind9
+  166  vim db.example.com 
+  167  systemctl restart bind9
+  168  systemctl status bind9
+  169  history
